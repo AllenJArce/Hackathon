@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: Config-Server
+    name: Config-Service
   cloud:
     config:
         uri: https://github.com/AllenJArce/Service-Hackathon.git
