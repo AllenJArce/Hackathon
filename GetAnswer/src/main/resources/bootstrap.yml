@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: get-answer
+  cloud:
+    config:
+      uri: http://localhost:8888
