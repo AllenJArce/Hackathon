@@ -27,6 +27,13 @@ public class OcaQuestion implements Serializable{
 	public OcaQuestion () {
 		
 	}
+	
+
+	public OcaQuestion(int questionId) {
+		super();
+		this.questionId = questionId;
+	}
+
 
 	public OcaQuestion(int questionId, String question, String answer) {
 		super();

@@ -17,11 +17,11 @@ public class GetCorrectAnswer {
 	DataSource dataSource;
 
 	@Autowired
-	OcaQuestionRepository ocaUserRepository;
+	OcaQuestionRepository ocaQuestionRepository;
 
 	@Transactional(readOnly = true)
 	@PostMapping("/getAnswer")
 	public OcaQuestion getAnswer(@RequestBody OcaQuestion ocaQuestion) {
-		return ocaQuestionRepository.findOne(ocaQuestion.getQuestionId());	//I have no idea what this is or where I access it
+		return ocaQuestionRepository.findOne(ocaQuestion.getQuestionId());	
 	}
 }
