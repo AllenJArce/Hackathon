@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: get-question-Service
+#  cloud:
+#    config:
+#      uri:  http://localhost:8888
+  datasource:
+    password: p4ssw0rd
+    username: ocatest
+    url: jdbc:oracle:thin:@octocat.c21x4yygth5e.us-east-2.rds.amazonaws.com:1521:ORCL
+    platform: oracle
+    driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    database: ORACLE
+    show-sql: true
