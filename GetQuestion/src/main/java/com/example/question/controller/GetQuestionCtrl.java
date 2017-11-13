@@ -26,4 +26,9 @@ public class GetQuestionCtrl {
 	public Questions getScore(@RequestBody Questions question) {
 		return QuestionRepository.findOne(question.getId());
 	}
+
+	@GetMapping("/getQuestion")
+	public Questions getStringScore() {
+		return QuestionRepository.findOne(1);
+	}
 }

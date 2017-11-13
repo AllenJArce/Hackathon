@@ -4,6 +4,7 @@ import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,5 +24,10 @@ public class GetCorrectAnswer {
 	@PostMapping("/getAnswer")
 	public Questions getAnswer(@RequestBody Questions ocaQuestion) {
 		return ocaQuestionRepository.findOne(ocaQuestion.getId());	//I have no idea what this is or where I access it
+	}
+
+	@GetMapping("/getAnswer")
+	public Questions getStringScore() {
+		return ocaQuestionRepository.findOne(2);
 	}
 }
