@@ -1,4 +1,4 @@
-package com.example.question.beans;
+package com.revature.oca.bean;
 
 import java.io.Serializable;
 

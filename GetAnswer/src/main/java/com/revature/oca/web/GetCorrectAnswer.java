@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.revature.oca.bean.OcaQuestion;
+import com.revature.oca.bean.Questions;
 import com.revature.oca.dao.OcaQuestionRepository;
 
 @RestController
@@ -21,7 +21,7 @@ public class GetCorrectAnswer {
 
 	@Transactional(readOnly = true)
 	@PostMapping("/getAnswer")
-	public OcaQuestion getAnswer(@RequestBody OcaQuestion ocaQuestion) {
-		return ocaQuestionRepository.findOne(ocaQuestion.getQuestionId());	
+	public Questions getAnswer(@RequestBody Questions ocaQuestion) {
+		return ocaQuestionRepository.findOne(ocaQuestion.getId());	//I have no idea what this is or where I access it
 	}
 }

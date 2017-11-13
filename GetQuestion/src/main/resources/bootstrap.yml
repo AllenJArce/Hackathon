@@ -1,18 +1,18 @@
-server:
-  port: 0
-
 spring:
   application:
-    name: get-question-Service
-#  cloud:
-#    config:
-#      uri:  http://localhost:8888
+    name: get-question
   datasource:
-    password: p4ssw0rd
-    username: ocatest
     url: jdbc:oracle:thin:@octocat.c21x4yygth5e.us-east-2.rds.amazonaws.com:1521:ORCL
-    platform: oracle
-    driver-class-name: oracle.jdbc.OracleDriver
+    username: ocatest
+    password: p4ssw0rd
+    driver-class-name: oracle.jdbc.driver.OracleDriver
   jpa:
-    database: ORACLE
-    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.Oracle10gDialect
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+server:
+  port: 0
